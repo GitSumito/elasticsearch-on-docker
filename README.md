@@ -1,19 +1,17 @@
-
-
 # healthCheck
-curl -X GET "localhost:9200/_cat/health?v&pretty"
+``` curl -X GET "localhost:9200/_cat/health?v&pretty"```
 
 # データ確認
-curl -X GET "localhost:9200/library/_doc/1" -H "content-type: application/json"
+``` curl -X GET "localhost:9200/library/_doc/1" -H "content-type: application/json"```
 
 # データ投入
-curl -X PUT "localhost:9200/library/_doc/1" -H 'Content-Type: application/json' -d '{"title": "hoge"}'
+``` curl -X PUT "localhost:9200/library/_doc/1" -H 'Content-Type: application/json' -d '{"title": "hoge"}'```
 
 # データ全取得
-curl -X GET "localhost:9200/library/_search" -H "content-type: application/json" | jq .
+``` curl -X GET "localhost:9200/library/_search" -H "content-type: application/json" | jq .```
 
 # クエリ検索
-curl -X GET "localhost:9200/library/_search" -H "content-type: application/json" -d '{"query": {"match": {"title": "hoge"}}}' | jq .
+``` curl -X GET "localhost:9200/library/_search" -H "content-type: application/json" -d '{"query": {"match": {"title": "hoge"}}}' | jq .```
 
 
 # 参考情報
